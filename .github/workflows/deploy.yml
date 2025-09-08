@@ -22,6 +22,16 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
+      - name: Fix @jiaminghi dependencies
+        run: |
+          # 解压修复的依赖文件
+          cd other_modules
+          unzip -o @jiaminghi.rar
+          # 替换 node_modules 中的有问题的依赖
+          cd ..
+          rm -rf node_modules/@jiaminghi
+          cp -r other_modules/@jiaminghi node_modules/
+        
       - name: Build
         run: npm run build
 
