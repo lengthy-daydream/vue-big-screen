@@ -89,43 +89,43 @@ export default defineComponent({
     const ranking = reactive({
       data: [
         {
-          name: '周口',
+          name: '北京',
           value: 55
         },
         {
-          name: '南阳',
+          name: '上海',
           value: 120
         },
         {
-          name: '西峡',
+          name: '广州',
           value: 78
         },
         {
-          name: '驻马店',
+          name: '深圳',
           value: 66
         },
         {
-          name: '新乡',
+          name: '成都',
           value: 80
         },
         {
-          name: '新乡2',
+          name: '重庆',
           value: 80
         },
         {
-          name: '新乡3',
+          name: '杭州',
           value: 80
         },
         {
-          name: '新乡4',
+          name: '武汉',
           value: 80
         },
         {
-          name: '新乡5',
+          name: '长沙',
           value: 80
         },
         {
-          name: '新乡6',
+          name: '南京',
           value: 80
         }
       ],

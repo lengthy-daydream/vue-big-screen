@@ -27,23 +27,23 @@ export default defineComponent({
     const config = reactive({
       data: [
         {
-          name: '南阳',
+          name: '上海',
           value: 167
         },
         {
-          name: '周口',
+          name: '北京',
           value: 67
         },
         {
-          name: '漯河',
+          name: '广州',
           value: 123
         },
         {
-          name: '郑州',
+          name: '深圳',
           value: 55
         },
         {
-          name: '西峡',
+          name: '成都',
           value: 98
         }
       ]
