@@ -26,11 +26,11 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
-      - name: Fix @jiaminghi dependencies
+      - name: Install Vue 3 compatible DataV
         run: |
-          # 替换 node_modules 中的有问题的依赖
-          rm -rf node_modules/@jiaminghi
-          cp -r other_modules/@jiaminghi node_modules/
+          # 卸载旧版本并安装Vue3兼容版本
+          npm uninstall @jiaminghi/data-view
+          npm install @kjgl77/datav-vue3@latest
         
       - name: Build
         run: npm run build

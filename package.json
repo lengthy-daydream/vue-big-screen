@@ -6,10 +6,10 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "deploy": "gh-pages -d dist" 
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
-    "@jiaminghi/data-view": "^2.10.0",
+    "@kjgl77/datav-vue3": "^1.7.4",
     "core-js": "^3.6.5",
     "echarts": "^5.1.1",
     "vue": "^3.0.0",
