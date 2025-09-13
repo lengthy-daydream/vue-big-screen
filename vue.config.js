@@ -1,6 +1,7 @@
 const { defineConfig } = require('@vue/cli-service')
 module.exports = defineConfig({
-  publicPath: '/vue-big-screen/',
+  // 根据环境设置 publicPath
+  publicPath: process.env.VUE_APP_DEPLOY_TARGET === 'netlify' ? '/' : '/vue-big-screen/',
   transpileDependencies: true,
   lintOnSave: false,
   devServer: {

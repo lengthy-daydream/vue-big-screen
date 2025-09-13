@@ -1,0 +1,63 @@
+[build]
+  # 构建命令
+  command = "npm run build:netlify"
+  
+  # 构建输出目录
+  publish = "dist"
+  
+  # 环境变量和 Node.js 版本
+  environment = { NODE_VERSION = "18", VUE_APP_DEPLOY_TARGET = "netlify" }
+
+[build.processing]
+  # 启用静态资源优化
+  skip_processing = false
+  
+[build.processing.css]
+  # CSS 优化
+  bundle = true
+  minify = true
+  
+[build.processing.js]
+  # JavaScript 优化
+  bundle = true
+  minify = true
+  
+[build.processing.images]
+  # 图片优化
+  compress = true
+
+# SPA 路由支持
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# 设置缓存头
+[[headers]]
+  for = "/static/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+    
+[[headers]]
+  for = "*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# 安全头设置
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin" 
